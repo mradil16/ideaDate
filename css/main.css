@@ -302,6 +302,8 @@ header li {
     position: absolute;
     z-index: 0;
     display: none;
+    top: 0;
+    left: 0;
 }
 
 /* favorite */
@@ -347,11 +349,29 @@ header li {
 
 /* slider */
 
-.slider {
-    position: relative;
+.carousel-cell {
+  width: 250px; /* full width */
+  height: 280px; /* height of carousel */
+  margin-right: 10px;
+  z-index: -1;
 }
 
-.slider img {
-    position: absolute;
+.flickity-prev-next-button{
+    background-color: transparent;
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+
+/* arrow color */
+.flickity-prev-next-button {
+    z-index: 99;
+}
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
 }
 
