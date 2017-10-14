@@ -111,7 +111,7 @@ header li {
     width: 100%;
     height: 370px;
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     background: -webkit-radial-gradient(transparent -30%, #273042 80%); /* Safari 5.1- 6.0 */
     background: -o-radial-gradient(transparent -30%, #273042 80%); /* Opera 11.6-12.0 */
     background: -moz-radial-gradient(transparent -30%, #273042 80%); /* Firefox 3.6-15 */
@@ -192,5 +192,166 @@ header li {
     top: 6px;
     left: 4px;
     font-size: 1.1em;
+}
+
+/*--------------- grid *------------------------------/
+
+/* Grid navigation */
+
+.grid-navigation li {
+    list-style-type: none;
+    display: inline-block;
+    color: #fff;
+    font-size: .9em;
+}
+
+.grid-navigation > ul {
+   padding-left: 10px;
+    margin-right: 80px;
+}
+
+.grid-navigation nav li {
+    margin: 0 35px;
+    padding: 7px 0;
+}
+
+.grid-navigation #popular {
+    display: inline-block;
+}
+
+.grid-navigation nav {
+    display: inline-block;
+}
+
+.grid-navigation nav li:active {
+    color: #e23943 !important;
+    border-bottom: 2px solid #e23943;
+}
+
+.active {
+    color: #e23943 !important;
+    border-bottom: 2px solid #e23943;
+}
+
+/* grid */
+
+.grid {
+    width: 900px;
+    margin-top: -50px;
+    margin-left: 10px;
+    position: relative;
+}
+
+/* slider main wrapper */
+
+.slider-main-wrapper {
+    float: left;
+    margin:0 10px;
+}
+
+/* slider wrapper */
+
+.slider-wrapper {
+    width: 240px;
+    height: 280px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.slider-wrapper:hover > .slide-layer {
+    display: block;
+}
+
+/* slider nav */
+
+.slider-nav {
+    position: absolute;
+    width: 240px;
+    z-index: 1;
+}
+
+.slider-nav .previous, .slider-nav .next {
+    display: inline-block;
+    margin-top: 48%;
+    font-size: 2.2em;
+    color: #fff;
+}
+
+.slider-nav .previous {
+    margin-right: 162px;
+    margin-left: -12px;
+}
+
+.slider-nav .next {
+    margin-right: 0px;
+    width: 35px;
+}
+
+.slider-nav .previous:hover, .slider-nav .next:hover {
+    cursor: pointer;
+}
+
+/* slide layer */
+
+.slide-layer {
+    width: 250px;
+    height: 280px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 0;
+    display: none;
+}
+
+/* favorite */
+
+.slider-wrapper .icon-heart-empty {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.8em;
+    color: #fff;
+    display: none;
+}
+
+.slider-wrapper:hover > .icon-heart-empty {
+    display: block;
+}
+
+
+/* slider info */
+
+.slider-info .rating, .slider-info h4 {
+    margin-bottom: 0;
+}
+
+.slider-info .rating{
+    display: inline-block;
+    font-size: .8em;
+    color: #fc3;
+}
+
+.slider-info h4 {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-top: 15px;
+    
+}
+
+.slider-info .likes {
+    margin-top: 5px;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+/* slider */
+
+.slider {
+    position: relative;
+}
+
+.slider img {
+    position: absolute;
 }
 
