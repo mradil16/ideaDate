@@ -21,8 +21,8 @@ html,body {
     font-family: 'Larke', sans-serif;
 }
 
-#browse, nav .menu li:last-child {
-    color: #eee;
+#browse, nav .menu li:last-child, .description #settings, .description #settings div {
+    color: #ddd;
 }
 
 /* header */
@@ -101,5 +101,96 @@ header li {
 /* showcase */
 
 .showcase {
-    min-height: 400px;
+    min-height: 450px;
+    background: url('../images/main-image.jpg') no-repeat 45% fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
+
+.layer {
+    width: 100%;
+    height: 370px;
+    position: absolute;
+    z-index: 1;
+    background: -webkit-radial-gradient(transparent -30%, #273042 80%); /* Safari 5.1- 6.0 */
+    background: -o-radial-gradient(transparent -30%, #273042 80%); /* Opera 11.6-12.0 */
+    background: -moz-radial-gradient(transparent -30%, #273042 80%); /* Firefox 3.6-15 */
+    background: radial-gradient(transparent -30%, #273042 80%); /* Standard syntax */
+}
+
+.description {
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 65px;
+}
+
+.description .thumb {
+    height: 170px;
+    width: 170px;
+    background: url('/images/thumb.png') center center;
+    -webkit-background-size: 115%;
+    background-size: 115%;
+    border-radius:100%;
+    border: 2px solid #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.description .info {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+
+.info h1 {
+    font-family: 'Croissant One';
+    font-size: 2.7em;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.info p:nth-child(2) {
+    font-size: 1.10em;
+    margin-bottom: 0;
+}
+
+.info p:nth-child(3) {
+    font-size: 0.75em;
+    margin-top: 12px;
+}
+
+.description .follow-or-settings a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #e23943;
+    padding: 8px 22px;
+    border-radius: 100px;
+    margin-right: 12px;
+    font-size: 0.95em;
+}
+
+.description .follow-or-settings {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.description #settings {
+   width: 34px;
+   height: 34px;
+   border-radius: 100%;
+    border: 1px solid #fff;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.description #settings div {
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    font-size: 1.1em;
+}
+
