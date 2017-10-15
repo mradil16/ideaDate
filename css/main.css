@@ -375,3 +375,28 @@ header li {
   color: white;
 }
 
+/*map */
+
+aside iframe {
+    margin-left: 20px;
+}
+
+/*footer*/
+
+footer {
+    background-color: #273042;
+    clear: both;
+    padding: 30px;
+}
+
+footer h1 {
+    font-family: 'Croissant One', sans-serif;
+    font-size: 1.8em;
+    color: #fff;
+    font-weight: normal;
+    margin-left: 7%;
+}
+
+footer h1 span {
+     color: #e23943;
+}
