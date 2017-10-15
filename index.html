@@ -36,6 +36,7 @@
         </div>
     </header>
     <div class="layer"></div>
+    <div class="container">
     <div class="description">
         <div class="thumb"></div>
         <div class="info">
@@ -50,14 +51,19 @@
             </div>
         </div>
     </div>
+    </div>
 </section>
-<section class="grid">
+<section class="main">
+    <div class="container">
+        <section class="grid">
    <div class="grid-navigation">
        <ul id="popular">
             <li>POPULAR <span class="icon-down-open-big"></span></li>
         </ul>
         <nav>
-            <ul>
+           <label for="toggle">&#9776;</label>
+           <input type="checkbox" name="" id="toggle">
+            <ul class="menu_2">
                 <li class="active">AFFORDABLE</li>
                 <li>FANCY</li>
                 <li>TIPS</li>
@@ -185,11 +191,15 @@
     </div>
     </div>
 </section>
+    </div>
+</section>
 <aside class="map">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1QkbRrAjJyQVLouF1GwSokrehFwE" width="520" height="660" frameBorder="0"></iframe>
+    <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1QkbRrAjJyQVLouF1GwSokrehFwE" width="540" height="660" frameBorder="0"></iframe>
 </aside>
 <footer>
-    <h1>IDEA<span>DATE</span></h1>
+    <div class="container">
+        <h1>IDEA<span>DATE</span></h1>
+    </div>
 </footer>
 <script src="script.js"></script>
 </body>
