@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
     padding: 0;
     margin: 0;
     height: 100%;
@@ -12,25 +13,110 @@ html,body {
     font-weight: normal;
 }
 
-/* GLOBAL */
+/*=============================================*/
+/*============ SUPPORT IE & MOZ ===============*/
+/*=============================================*/
+
+@supports (-moz-appearance:meterbar) {
+    .grid {
+        margin-top: -50px !important;
+    }
+    
+    .description #settings div {
+    top: 7px !important;
+    left: 5px !important;
+}
+}
+
+/*===================================*/
+/*============ GLOBAL ===============*/
+/*===================================*/
 
 .container {
     width: 1320px;
-    max-width: 100%;
-    margin: auto;
     font-family: 'Larke', sans-serif;
 }
 
-#browse, nav .menu li:last-child, .description #settings, .description #settings div {
+.layer,
+.container,
+aside iframe {
+    max-width: 100%;
+}
+
+.container, 
+.showcase {
+    margin: auto;
+}
+
+header, 
+.description, 
+.description .follow-or-settings a,
+label, input, 
+.grid-navigation li, 
+.slider-nav .previous,
+.slider-nav .next,
+.slider-wrapper .icon-heart-empty,
+footer h1 {
+    color: #fff;
+}
+
+#browse, 
+nav .menu li:last-child,
+.description #settings, 
+.description #settings div {
     color: #ddd;
 }
 
-/* header */
+header,
+footer {
+    background-color: #273042;
+}
+
+header #branding,
+footer h1 {
+    font-family: 'Croissant One', sans-serif;
+}
+
+header #branding h1,
+.info h1,
+footer h1 {
+    font-weight: normal;
+}
+
+#branding h1 span,
+footer h1 span {
+    color: #e23943;
+}
+
+header #browse,
+.description,
+.description .thumb,
+.description #settings,
+.grid,
+.slider-wrapper {
+    position: relative;
+}
+
+header #browse span,
+.layer,
+.description .thumb img,
+.description .follow-or-settings,
+.description #settings div,
+.slider-nav,
+.slide-layer,
+.slider-wrapper .icon-heart-empty {
+    position: absolute;
+}
+
+
+
+
+/*===================================*/
+/*============ HEADER ===============*/
+/*===================================*/
 
 header {
-    color: #fff;
     height: 81px;
-    background-color: #273042;
 }
 
 header #branding, header #browse, header nav{
@@ -38,17 +124,12 @@ header #branding, header #browse, header nav{
 }
 
 header #branding {
-    font-family: 'Croissant One', sans-serif;
     font-size: 1.1em;
 }
 
 header #branding h1{
     margin: 18px 0;
-    font-weight: normal;
-}
-
-#branding h1 span {
-    color: #e23943;
+    font-size: 2.1em;
 }
 
 header #browse {
@@ -56,12 +137,10 @@ header #browse {
     padding: 5px 20px;
     margin-left: 8%;
     font-size: 14px;
-    position: relative;
     
 }
 
 header #browse span {
-    position: absolute;
     right: 0;
     top: 7px;
 }
@@ -98,21 +177,20 @@ header li {
     margin: 0 5px;
 }
 
-/* showcase */
+/*=====================================*/
+/*============ SHOWCASE ===============*/
+/*=====================================*/
 
 .showcase {
     min-height: 450px;
     background: url('../images/main-image.jpg') no-repeat 45% fixed;
     -webkit-background-size: cover;
     background-size: cover;
-    margin: auto;
 }
 
 .layer {
-    max-width: 100%;
     width: 100%;
     height: 370px;
-    position: absolute;
     z-index: 0;
     background: -webkit-radial-gradient(transparent -30%, #273042 80%); /* Safari 5.1- 6.0 */
     background: -o-radial-gradient(transparent -30%, #273042 80%); /* Opera 11.6-12.0 */
@@ -121,23 +199,23 @@ header li {
 }
 
 .description {
-    color: #fff;
     z-index: 2;
-    position: relative;
     padding-left: 20px;
     margin-top: 65px;
 }
 
 .description .thumb {
-    height: 170px;
-    width: 170px;
-    background: url('/images/thumb.png') center center;
-    -webkit-background-size: 115%;
-    background-size: 115%;
+    height: 166px;
+    width: 166px;
     border-radius:100%;
     border: 2px solid #fff;
     display: inline-block;
     vertical-align: middle;
+}
+
+.description .thumb img {
+    top: -8px;
+    left: -9px;
 }
 
 .description .info {
@@ -149,7 +227,6 @@ header li {
 .info h1 {
     font-family: 'Croissant One';
     font-size: 2.7em;
-    font-weight: normal;
     margin-bottom: 25px;
 }
 
@@ -164,7 +241,6 @@ header li {
 }
 
 .description .follow-or-settings a {
-    color: #fff;
     text-decoration: none;
     background-color: #e23943;
     padding: 8px 22px;
@@ -174,7 +250,6 @@ header li {
 }
 
 .description .follow-or-settings {
-    position: absolute;
     right: 20px;
     bottom: 10px;
 }
@@ -185,27 +260,27 @@ header li {
    border-radius: 100%;
     border: 1px solid #fff;
     display: inline-block;
-    position: relative;
     vertical-align: middle;
 }
 
 .description #settings div {
-    position: absolute;
     top: 6px;
     left: 4px;
     font-size: 1.1em;
 }
 
-/*--------------- grid *------------------------------/
+/*==================================*/
+/*============ GRID ===============*/
+/*================================*/
 
-/* Grid navigation */
+/*------ Grid navigation --------*/
+
 .grid-navigation nav {
     text-align: right;
 }
 
 label,input {
     font-size: 1.7em;
-    color: #fff;
     display: none;
 }
 
@@ -213,13 +288,13 @@ label,input {
 .grid-navigation li {
     list-style-type: none;
     display: inline-block;
-    color: #fff;
     font-size: .9em;
 }
 
 .grid-navigation > ul {
    padding-left: 10px;
     margin-right: 70px;
+    margin-bottom: 25px;
 }
 
 .grid-navigation nav li {
@@ -245,16 +320,15 @@ label,input {
     border-bottom: 2px solid #e23943;
 }
 
-/* grid */
-
 .grid {
     width: 800px;
     margin-top: -47px;
     margin-left: 10px;
-    position: relative;
 }
 
-/* slider main wrapper */
+/*=================================================*/
+/*============ SLIDER MAIN WRAPPER ===============*/
+/*===============================================*/
 
 .slider-main-wrapper {
     float: left;
@@ -262,12 +336,11 @@ label,input {
     margin-left: 0;
 }
 
-/* slider wrapper */
+/*----------- slider wrapper -----------------*/
 
 .slider-wrapper {
     width: 240px;
     height: 280px;
-    position: relative;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -276,10 +349,9 @@ label,input {
     display: block;
 }
 
-/* slider nav */
+/*---------- slider nav ---------------------*/
 
 .slider-nav {
-    position: absolute;
     width: 240px;
     z-index: 1;
 }
@@ -288,7 +360,6 @@ label,input {
     display: inline-block;
     margin-top: 48%;
     font-size: 2.2em;
-    color: #fff;
 }
 
 .slider-nav .previous {
@@ -305,28 +376,25 @@ label,input {
     cursor: pointer;
 }
 
-/* slide layer */
+/*-------------- slide layer ------------------*/
 
 .slide-layer {
     width: 250px;
     height: 280px;
     border-radius: 5px;
     background-color: rgba(0,0,0,0.5);
-    position: absolute;
     z-index: 0;
     display: none;
     top: 0;
     left: 0;
 }
 
-/* favorite */
+/*--------------- favorite --------------------*/
 
 .slider-wrapper .icon-heart-empty {
-    position: absolute;
     right: 15px;
     top: 15px;
     font-size: 1.8em;
-    color: #fff;
     display: none;
 }
 
@@ -335,7 +403,11 @@ label,input {
 }
 
 
-/* slider info */
+/*------------ slider info ---------------------*/
+
+.slider-info {
+    color: #262626;
+}
 
 .slider-info .rating, .slider-info h4 {
     margin-bottom: 0;
@@ -360,7 +432,7 @@ label,input {
     font-weight: 600;
 }
 
-/* slider */
+/*--------------- slider ----------------------*/
 
 .carousel-cell {
   width: 250px; /* full width */
@@ -388,34 +460,32 @@ label,input {
   color: white;
 }
 
-/*map */
+/*================================*/
+/*============ MAP ===============*/
+/*================================*/
 
 aside iframe {
     margin-left: 10px;
-    max-width: 100%;
 }
 
-/*footer*/
+/*===================================*/
+/*============ FOOTER ===============*/
+/*==================================*/
 
 footer {
-    background-color: #273042;
     clear: both;
     padding: 30px;
+    margin-top: 70px;
 }
 
 footer h1 {
-    font-family: 'Croissant One', sans-serif;
     font-size: 1.8em;
-    color: #fff;
-    font-weight: normal;
     margin-left: 7%;
 }
 
-footer h1 span {
-     color: #e23943;
-}
-
-/*media queries*/
+/*===========================================*/
+/*============ MEDIA QUERIES ===============*/
+/*=========================================*/
 
 @media(max-width:1350px){
     header .container {
@@ -497,7 +567,6 @@ footer h1 span {
         display: block;
     }
     
-    /* Grid navigation */
 .grid-navigation nav {
     line-height: 50px;
     position: absolute;
@@ -507,7 +576,6 @@ footer h1 span {
 }
     
 .grid-navigation nav .menu_2{
-    background-color: #273042;
     padding: 0;
     margin-top: -8px;
     text-align: center;
@@ -549,7 +617,6 @@ nav .menu_2 li:last-child {
 .grid-navigation nav li {
     padding:0;
 }
-/* grid */
 
 .grid {
     padding-top: 7px;
